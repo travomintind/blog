@@ -1,10 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Travomint Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Travomint Blog | Travel Tips, Flight Guides & Travel Updates</title>
+
+  <meta name="description" content="Travomint Blog — travel tips, flight booking guides, destination ideas, airline information and useful travel updates.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 700;
+      color: #0b8f9c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #0b8f9c;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e8f8fa, #ffffff);
+      padding: 75px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 15px;
+      color: #102a43;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+      color: #52606d;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #102a43;
+    }
+
+    .categories {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .category {
+      background: #ffffff;
+      border: 1px solid #d9e2ec;
+      padding: 9px 17px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .category:hover {
+      background: #0b8f9c;
+      color: white;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card-image {
+      height: 190px;
+      background: linear-gradient(135deg, #0b8f9c, #56c6d0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 42px;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #0b8f9c;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #102a43;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #627d98;
+      margin-bottom: 18px;
+    }
+
+    .read-more {
+      color: #0b8f9c;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .footer {
+      background: #102a43;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    .footer p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 800px) {
+      .articles {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to Travomint Blog</h1>
-  <p>Travel tips and flight booking guides.</p>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="/blog/" class="logo">Travomint Blog</a>
+
+      <div class="nav-links">
+        <a href="/blog/">Home</a>
+        <a href="#travel-tips">Travel Tips</a>
+        <a href="#flight-guides">Flight Guides</a>
+        <a href="#destinations">Destinations</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Travel Smarter with Travomint</h1>
+
+    <p>
+      Travel tips, flight booking guides, destination ideas,
+      airline information and useful travel updates.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <h2 class="section-title">Explore Our Travel Guides</h2>
+
+    <div class="categories">
+      <a href="#travel-tips" class="category">Travel Tips</a>
+      <a href="#flight-guides" class="category">Flight Guides</a>
+      <a href="#destinations" class="category">Destinations</a>
+      <a href="#airlines" class="category">Airlines</a>
+    </div>
+
+    <div class="articles">
+
+      <article class="card" id="travel-tips">
+        <div class="card-image">✈️</div>
+
+        <div class="card-content">
+          <span class="tag">Travel Tips</span>
+
+          <h3>Essential Travel Tips for Your Next Trip</h3>
+
+          <p>
+            Useful travel planning tips to help make your next journey
+            smoother and more convenient.
+          </p>
+
+          <a href="/blog/travel-tips/" class="read-more">
+            Read Article →
+          </a>
+        </div>
+      </article>
+
+      <article class="card" id="flight-guides">
+        <div class="card-image">🧳</div>
+
+        <div class="card-content">
+          <span class="tag">Flight Guides</span>
+
+          <h3>How to Plan and Book Your Flight</h3>
+
+          <p>
+            Understand important things to check before booking your
+            next flight.
+          </p>
+
+          <a href="/blog/flight-booking-guide/" class="read-more">
+            Read Article →
+          </a>
+        </div>
+      </article>
+
+      <article class="card" id="destinations">
+        <div class="card-image">🌍</div>
+
+        <div class="card-content">
+          <span class="tag">Destinations</span>
+
+          <h3>Travel Inspiration & Destination Guides</h3>
+
+          <p>
+            Discover useful destination information and ideas for
+            planning your next trip.
+          </p>
+
+          <a href="/blog/destinations/" class="read-more">
+            Read Article →
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Travomint Blog. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
